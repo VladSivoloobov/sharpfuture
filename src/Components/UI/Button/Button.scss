@@ -25,7 +25,7 @@ $hover-color: #eeeeee98;
     color: $hover-color;
 
     .additonal-icon * {
-      fill: $hover-color;
+      fill: $hover-color !important;
     }
   }
 

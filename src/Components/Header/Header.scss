@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   z-index: 8;
+  transition: background 0.5s;
 
   .container {
     display: flex;
@@ -21,10 +22,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     .header-logo__pickaxe {
       width: 60px;
       height: auto;
+      animation: pickaxe-animation 0.8s infinite alternate
+        cubic-bezier(0.68, -0.55, 0.27, 1.55);
     }
   }
 
@@ -35,16 +43,50 @@
     .header-navigation__header-navigation-list {
       display: flex;
       list-style: none;
+      align-items: center;
       gap: 65px;
 
       .header-navigation-list__header-navigation-list-item {
+        transition: opacity 0.5s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
         .header-navigation-list-item__link {
-          font-size: var(--text-size-xl);
+          font-size: var(--text-size-x);
           color: var(--color-white);
           font-weight: 500;
           text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          .navigation-icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+          }
         }
       }
     }
+  }
+}
+
+@keyframes pickaxe-animation {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+.hero-section__scroll-button {
+  cursor: pointer;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
   }
 }

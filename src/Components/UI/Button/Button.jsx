@@ -2,11 +2,14 @@ import { useState } from "react";
 import "./Button.scss";
 import { Link } from "react-router-dom";
 
-export const ButtonLink = ({ to, children }) => {
+export const ButtonLink = (props) => {
   const [getBubbleClickPosition, setBubbleClickPosition] = useState(null);
+
+  console.log(props);
 
   return (
     <Link
+      {...props}
       onClick={(e) => {
         const observer = e.currentTarget.getBoundingClientRect();
         const topOffset = Math.abs(e.clientY - observer.top);
@@ -17,11 +20,10 @@ export const ButtonLink = ({ to, children }) => {
           y: topOffset,
         });
       }}
-      to={to}
       onAnimationEnd={() => {
         setBubbleClickPosition(null);
       }}
-      className={"button"}
+      className={"button " + (props.className ? props.className : "")}
       data-clicked={getBubbleClickPosition ? true : false}
     >
       <span
@@ -32,7 +34,7 @@ export const ButtonLink = ({ to, children }) => {
         }}
         className="bubble-effect"
       ></span>
-      {children}
+      {props.children}
     </Link>
   );
 };

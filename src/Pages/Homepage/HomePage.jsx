@@ -5,12 +5,14 @@ import VideoBackground from "../../Components/UI/VideoBackground/videoBackground
 import { Link } from "react-router-dom";
 import { ButtonLink } from "../../Components/UI/Button/Button.jsx";
 import { GamepadIcon } from "../../Components/Icons/Gamepad/GamepadIcon.jsx";
+import { CartButton } from "../../Components/UI/CartButton/CartButton.jsx";
 
 export const HomePage = () => {
   return (
     <>
       <Header />
       <main className="main">
+        <CartButton />
         <section className="hero-section">
           <VideoBackground src="/video/video-background.mp4" type="video/mp4" />
           <Container>
@@ -31,6 +33,12 @@ export const HomePage = () => {
             <button
               className="hero-section__scroll-button"
               aria-label="scroll down"
+              onClick={() => {
+                window.scrollTo({
+                  top: 200,
+                  behavior: "smooth",
+                });
+              }}
             ></button>
           </Container>
         </section>
