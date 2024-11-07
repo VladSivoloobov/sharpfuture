@@ -1,0 +1,69 @@
+@use "sass:map";
+
+$heading-sizes: "heading-1", "heading-2", "heading-3";
+
+@each $heading-size in $heading-sizes {
+  @media screen and (max-width: 991px) {
+    .title.#{$heading-size} {
+      font-size: var(--#{$heading-size}-mobile-size);
+    }
+  }
+
+  .title.#{$heading-size} {
+    font-size: var(--#{$heading-size}-desktop-size);
+  }
+}
+
+.title.white {
+  color: var(--color-white);
+}
+
+$subtitle-sizes: "size-m", "size-x", "size-xl";
+
+@each $subtitle-size in $subtitle-sizes {
+  .subtitle.#{$subtitle-size} {
+    font-size: var(--text-#{$subtitle-size});
+  }
+}
+
+.subtitle.white {
+  color: var(--color-white);
+}
+
+.title.with-subtitle {
+  margin-bottom: 8px;
+}
+
+.subtitle.with-button {
+  margin-bottom: 16px;
+}
+
+.title.medium-weight {
+  font-weight: 400;
+}
+
+.title {
+  .title__span.bold-weight {
+    font-weight: 700;
+  }
+
+  .title__span.lavender-color {
+    color: var(--lavender);
+  }
+
+  .title__span.blue-color {
+    color: var(--blue);
+  }
+}
+
+.title.light-weight {
+  font-weight: 400;
+}
+
+.subtitle.gray {
+  color: var(--light-gray);
+}
+
+.title.center {
+  text-align: center;
+}

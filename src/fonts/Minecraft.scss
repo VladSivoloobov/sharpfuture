@@ -1,0 +1,14 @@
+@use "../mixins";
+
+@use "sass:map";
+
+$font-weights: (
+  "Bold": 700,
+  "Regular": 400,
+);
+
+@include mixins.import-fonts(
+  $fonts: $font-weights,
+  $font-family: "Minecraft",
+  $font-type: "otf"
+);

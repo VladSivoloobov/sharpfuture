@@ -1,0 +1,9 @@
+@mixin import-fonts($fonts, $font-family, $font-type: "ttf") {
+  @each $font-name, $font-weight in $fonts {
+    @font-face {
+      font-family: "#{$font-family}";
+      src: url("/fonts/#{$font-family}/#{$font-family}-#{$font-name}.#{$font-type}");
+      font-weight: $font-weight;
+    }
+  }
+}

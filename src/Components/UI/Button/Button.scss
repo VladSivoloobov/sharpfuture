@@ -1,0 +1,70 @@
+$transition-duration: 0.5s;
+$hover-color: #eeeeee98;
+
+.button {
+  text-decoration: none;
+  padding: 16px 24px;
+  background-color: var(--blue);
+  color: var(--color-dark-green);
+  border-radius: 24px;
+  color: var(--light-gray);
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: color $transition-duration, transform 0.1s;
+
+  &[data-clicked="true"] {
+    transform: scale(0.95);
+  }
+
+  &:not([data-clicked="true"]):hover {
+    color: $hover-color;
+
+    .additonal-icon * {
+      fill: $hover-color;
+    }
+  }
+
+  .additonal-icon {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    * {
+      transition: fill $transition-duration;
+    }
+  }
+
+  .bubble-effect {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 2px;
+    height: 2px;
+    animation: bubble-effect-animation 2s,
+      bubble-effect-animation-hide 1s forwards;
+    border-radius: 100%;
+  }
+}
+
+@keyframes bubble-effect-animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1000);
+  }
+}
+
+@keyframes bubble-effect-animation-hide {
+  50% {
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}

@@ -1,0 +1,50 @@
+.header {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 8;
+
+  .container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__header-logo {
+    font-size: 32px;
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 500;
+    font-family: "Minecraft";
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .header-logo__pickaxe {
+      width: 60px;
+      height: auto;
+    }
+  }
+
+  .header__header-navigation {
+    margin-left: auto;
+    margin-right: 150px;
+
+    .header-navigation__header-navigation-list {
+      display: flex;
+      list-style: none;
+      gap: 65px;
+
+      .header-navigation-list__header-navigation-list-item {
+        .header-navigation-list-item__link {
+          font-size: var(--text-size-xl);
+          color: var(--color-white);
+          font-weight: 500;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

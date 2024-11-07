@@ -1,0 +1,17 @@
+@use "../mixins";
+
+@use "sass:map";
+
+$font-weights: (
+  "Black": 900,
+  "Bold": 700,
+  "ExtraBold": 1000,
+  "ExtraLight": 200,
+  "Light": 300,
+  "Medium": 500,
+  "Regular": 400,
+  "SemiBold": 600,
+  "Thin": 100,
+);
+
+@include mixins.import-fonts($fonts: $font-weights, $font-family: "Roboto");

@@ -1,0 +1,51 @@
+@use "fonts/fonts.scss";
+@use "./styles/texts.scss";
+
+:root {
+  --dark-blue: #1b232b;
+  --gray: #b4b4b4;
+  --light-blue: #a4b9d6;
+  --blue: #2980b9;
+  --lighter-dark-blue: #34495e;
+  --light-gray: #eeeeee;
+  --lavender: #aa7dc2;
+  --dull-yellow: #f1c40f;
+  --color-white: white;
+
+  --text-size-m: 16px;
+  --text-size-x: 18px;
+  --text-size-xl: 20px;
+
+  --heading-1-desktop-size: 72px;
+  --heading-1-mobile-size: 48px;
+
+  --heading-2-mobile-size: 32px;
+  --heading-2-desktop-size: 48px;
+
+  --heading-3-desktop-size: 32px;
+  --heading-3-mobile-size: 28px;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  color: black;
+}
+
+body {
+  background-color: var(--dark-blue);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+}
