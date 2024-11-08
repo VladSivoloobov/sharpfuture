@@ -45,30 +45,6 @@
       list-style: none;
       align-items: center;
       gap: 65px;
-
-      .header-navigation-list__header-navigation-list-item {
-        transition: opacity 0.5s;
-
-        &:hover {
-          opacity: 0.8;
-        }
-
-        .header-navigation-list-item__link {
-          font-size: var(--text-size-x);
-          color: var(--color-white);
-          font-weight: 500;
-          text-decoration: none;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-
-          .navigation-icon {
-            display: block;
-            width: 30px;
-            height: 30px;
-          }
-        }
-      }
     }
   }
 }

@@ -15,10 +15,10 @@ $hover-color: #eeeeee98;
   gap: 10px;
   position: relative;
   overflow: hidden;
-  transition: color $transition-duration, transform 0.1s;
+  transition: all $transition-duration cubic-bezier(0.18, 0.89, 0.32, 1.27);
 
-  &[data-clicked="true"] {
-    transform: scale(0.95);
+  &:hover {
+    transform: scale(1.05);
   }
 
   &:not([data-clicked="true"]):hover {

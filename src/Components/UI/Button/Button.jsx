@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 export const ButtonLink = (props) => {
   const [getBubbleClickPosition, setBubbleClickPosition] = useState(null);
 
-  console.log(props);
-
   return (
     <Link
       {...props}
