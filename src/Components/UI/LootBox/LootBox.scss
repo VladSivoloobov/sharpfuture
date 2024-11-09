@@ -1,0 +1,35 @@
+.loot-box {
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  height: 100%;
+  padding: 24px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.98);
+  }
+
+  .loot-box__canvas-wrapper {
+    height: 200px;
+    width: 100%;
+    aspect-ratio: 156 / 200;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .price {
+    font-size: 18px;
+    color: var(--gray);
+    font-weight: 300;
+  }
+}

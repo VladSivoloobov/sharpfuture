@@ -18,10 +18,10 @@ export const HeroSection = () => {
   return (
     <section
       onMouseMove={(e) => {
-        setCurrentMouseMove({
-          x: e.clientX,
-          y: e.clientY,
-        });
+        // setCurrentMouseMove({
+        //   x: e.clientX,
+        //   y: e.clientY,
+        // });
       }}
       className="hero-section"
     >
@@ -29,14 +29,9 @@ export const HeroSection = () => {
         fixed={true}
         src="/video/video-background.mp4"
         type="video/mp4"
-        offset={-currentScroll / 4}
         currentMouseMove={currentMouseMove}
       />
-      <Container
-        style={{
-          transform: `translateY(${-currentScroll / 3}px)`,
-        }}
-      >
+      <Container>
         <h1 className="title heading-1 white with-subtitle light-weight center">
           <span className="title__span bold-weight blue-color">
             SharpFuture
