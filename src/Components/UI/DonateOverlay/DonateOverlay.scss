@@ -1,0 +1,59 @@
+.donate-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #1b232bea;
+  z-index: 9;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .canvas-wrapper {
+      height: 70%;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .canvas-wrapper.loaded {
+      animation: case-animation 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.27);
+    }
+
+    .donate-info {
+      height: max-content;
+      color: white;
+    }
+
+    .title {
+      color: var(--light-gray);
+      text-align: center;
+    }
+
+    .donate-list {
+      display: flex;
+      list-style: none;
+      gap: 10px;
+
+      .donate-list__item {
+      }
+    }
+  }
+}
+
+html:has(.donate-overlay) {
+  overflow: hidden;
+}
+
+@keyframes case-animation {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: 0;
+  }
+}

@@ -34,6 +34,24 @@
       "type": "VEC3"
     },
     {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 72,
+      "max": [
+        1.0,
+        3.3522724152135197e-07,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -5.363500804378418e-06,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
       "bufferView": 2,
       "componentType": 5126,
       "count": 72,
@@ -103,6 +121,7 @@
     },
     {
       "bufferView": 4,
+      "byteOffset": 1152,
       "componentType": 5126,
       "count": 72,
       "max": [
@@ -164,21 +183,21 @@
       "name": "Chest_0_A|Chest_0_AAction",
       "samplers": [
         {
-          "input": 7,
+          "input": 8,
           "interpolation": "LINEAR",
-          "output": 8
+          "output": 9
         }
       ]
     }
   ],
   "asset": {
     "extras": {
-      "author": "Blender3D (https://sketchfab.com/Blender3D)",
+      "author": "Minecraft (https://sketchfab.com/minefur)",
       "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
-      "source": "https://sketchfab.com/3d-models/minecraft-chest-83c5b03288e9416fbe65616e45de2918",
+      "source": "https://sketchfab.com/3d-models/minecraft-chest-137c1d2f391a4b7c9234e035473d0ae3",
       "title": "Minecraft Chest"
     },
-    "generator": "Sketchfab-12.66.0",
+    "generator": "Sketchfab-13.79.0",
     "version": "2.0"
   },
   "bufferViews": [
@@ -214,7 +233,7 @@
     },
     {
       "buffer": 0,
-      "byteLength": 1152,
+      "byteLength": 2304,
       "byteOffset": 3312,
       "byteStride": 16,
       "name": "floatBufferViews",
@@ -223,26 +242,26 @@
     {
       "buffer": 0,
       "byteLength": 320,
-      "byteOffset": 4464,
+      "byteOffset": 5616,
       "name": "floatBufferViews"
     },
     {
       "buffer": 0,
       "byteLength": 484,
-      "byteOffset": 4784,
+      "byteOffset": 5936,
       "name": "floatBufferViews"
     },
     {
       "buffer": 0,
       "byteLength": 1936,
-      "byteOffset": 5268,
+      "byteOffset": 6420,
       "byteStride": 16,
       "name": "floatBufferViews"
     }
   ],
   "buffers": [
     {
-      "byteLength": 7204,
+      "byteLength": 8356,
       "uri": "scene.bin"
     }
   ],
@@ -251,21 +270,22 @@
       "uri": "textures/Material_baseColor.png"
     },
     {
-      "uri": "textures/Material_metallicRoughness.png"
+      "uri": "textures/Material_normal.png"
     }
   ],
   "materials": [
     {
       "doubleSided": true,
       "name": "Material",
+      "normalTexture": {
+        "index": 1
+      },
       "pbrMetallicRoughness": {
         "baseColorTexture": {
           "index": 0
         },
         "metallicFactor": 0.0,
-        "metallicRoughnessTexture": {
-          "index": 1
-        }
+        "roughnessFactor": 0.8239417257461427
       }
     }
   ],
@@ -275,13 +295,14 @@
       "primitives": [
         {
           "attributes": {
-            "JOINTS_0": 5,
+            "JOINTS_0": 6,
             "NORMAL": 1,
             "POSITION": 0,
-            "TEXCOORD_0": 2,
-            "WEIGHTS_0": 6
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "WEIGHTS_0": 7
           },
-          "indices": 3,
+          "indices": 4,
           "material": 0,
           "mode": 4
         }
@@ -318,16 +339,16 @@
         2
       ],
       "matrix": [
-        1.0,
+        0.009999999776482582,
         0.0,
         0.0,
         0.0,
         0.0,
         0.0,
-        1.0,
+        0.009999999776482582,
         0.0,
         0.0,
-        -1.0,
+        -0.009999999776482582,
         0.0,
         0.0,
         0.0,
@@ -492,7 +513,7 @@
   ],
   "skins": [
     {
-      "inverseBindMatrices": 4,
+      "inverseBindMatrices": 5,
       "joints": [
         6,
         7,
